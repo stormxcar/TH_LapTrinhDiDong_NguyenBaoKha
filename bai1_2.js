@@ -40,3 +40,5 @@ if (input) {
 } else {
   console.log("John co BMI cao hon Mark");
 }
+
+

@@ -35,7 +35,17 @@ function calc_average(arr) {
     sum += arr[i];
   }
 
-  return sum;
+  return sum / arr.length;
 }
 
 console.log(calc_average(data_Dolphins_team));
+console.log(calc_average(data_Koalas_team));
+
+var vaL_Dolphins = Math.ceil(calc_average(data_Dolphins_team));
+var val_Koalas = Math.ceil(calc_average(data_Koalas_team));
+
+if (vaL_Dolphins > val_Koalas) {
+  console.log(`Team Dolphins is win with ${vaL_Dolphins}`);
+} else {
+  console.log(`Team Koalas is win with ${val_Koalas}`);
+}
