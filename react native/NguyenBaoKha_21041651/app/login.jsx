@@ -15,7 +15,7 @@ export default function loginScreen() {
         <Text style={{ fontSize: 40, fontWeight: 700 }}>Login</Text>
       </View>
       <View style={{ display: "flex", gap: 20 }}>
-        <TextInput style={styles.input} placeholder="email" />
+        <TextInput  style={styles.input} placeholder="email" />
         <TextInput style={styles.input} placeholder="password" />
       </View>
       <View>
@@ -31,7 +31,7 @@ export default function loginScreen() {
       </View>
       <View style={styles.options}>
         <Text>When you agree with term and conditions</Text>
-        <Text>Forgot your password</Text>
+        <Link href="/generatorPassword" style={{color:'blue',textDecorationLine:'underline'}}>Forgot your password</Link>
         <Text>Or Login with</Text>
       </View>
       <View
@@ -91,5 +91,6 @@ const styles = StyleSheet.create({
     // textDecorationLine:'underline',
     backgroundColor: "blue",
     padding: 15,
+    borderRadius:3
   },
 });
