@@ -67,7 +67,10 @@ export default function App() {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
-          <Link style={{ textAlign: "center", fontSize: 20, fontWeight: 500 }} href='/Product'>Product</Link>
+          <Link style={{ textAlign: "center", fontSize: 20, fontWeight: 500 }} href='/ListProduct_1'>PRODUCT</Link>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Link style={{ textAlign: "center", fontSize: 20, fontWeight: 500 }} href='/Cart'>CART</Link>
         </TouchableOpacity>
       </View>
     </View>
