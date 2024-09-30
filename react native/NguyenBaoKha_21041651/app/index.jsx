@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import { router } from "expo-router";
+import { router,Link } from "expo-router";
 
 export default function App() {
   return (
@@ -40,8 +40,9 @@ export default function App() {
         style={{
           display: "flex",
           alignItems: "center",
-          flexDirection: "row",
-          justifyContent: "space-between",
+          flexDirection: "column",
+          justifyContent: "center",
+          gap: 10,
           width: "100%",
         }}
       >
@@ -64,6 +65,9 @@ export default function App() {
           <Text style={{ textAlign: "center", fontSize: 20, fontWeight: 500 }}>
             SIGN UP
           </Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Link style={{ textAlign: "center", fontSize: 20, fontWeight: 500 }} href='/Product'>Product</Link>
         </TouchableOpacity>
       </View>
     </View>

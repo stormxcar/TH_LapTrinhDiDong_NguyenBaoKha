@@ -32,6 +32,8 @@ export default function loginScreen() {
       <View style={styles.options}>
         <Text>When you agree with term and conditions</Text>
         <Link href="/generatorPassword" style={{color:'blue',textDecorationLine:'underline'}}>Forgot your password</Link>
+        <Text>You haven't an account ?</Text>
+        <Link style={{color:'red',textDecorationLine:'underline'}} href="/signup">Sign up</Link>
         <Text>Or Login with</Text>
       </View>
       <View
