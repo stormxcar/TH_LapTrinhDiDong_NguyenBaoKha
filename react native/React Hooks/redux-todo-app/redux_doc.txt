@@ -1,0 +1,42 @@
+** REDUX 
+
+1. là một thư viện , làm việc tốt với reduce
+2. phục vụ cho việc quản lý nhiều state (truyền state thông qua  các component) - là gồm nhiều hành động yêu cầu phải cập nhật liên tục 
+3. Kiến trúc - Luồng hoạt động :
+
+  user interface --action (old state)--> middleware (reducer)
+    ^                                            |
+  (new state)                                    |
+    |-- store <--------- action (old state) -----|
+
+<=> Cấu trúc từng phần: 
+1. KHỞI TẠO GIÁ TRỊ BAN ĐẦU là các state chính được luôn phải render ra 1 lần 
+  - let appState = {number : 1, histories : [1] , errorMsg : ''}
+
+2. action : (type, value)
+
+3. const NAMEreducer = (state : tham số mặc định , action) = { ... return state}
+  - xử lý từng case với từng hành động từ UI gửi về (thêm , xóa, sửa ,...)
+  - bắt buộc luôn trả về 1 state
+
+4. store = createStore(NAMEreducer , appState (state ban đầu))
+
+5. sử dụng store:
+  - store.subcribe(callback fn): biết được state mới, act đã được thực hiện  
+  - store.dispatch(action)
+
+** Phối hợp nhiều reducer : xử lý cho app bị lỗi và get gtri sai
+  - sử dụng hàm combineReducers : cho phép xử lý với nhiều NAMEreducer
+
+**middleware : lớp trung gian được chèn vào các reducer tăng tính xử lý
+
+---------------------------------------------
+ở view có một event bắn ra một action (mô tả hành đông việc làm gì (dispatch) đến store(kho chưa data) - có reduce xử lý và trả về state
+
+**một phần của redux bao gồm : (NHIỀU ACT , NHIỀU REDUCER => 1 STORE (QUẢN LÝ TẤT CẢ CÁC HÀNH ĐỘNG TỪ UI))
+- action : type - định nghĩa action thuộc loại nào , payload như một dữ liệu được truyền theo action
+- reducer(action, state hiện tại) -> thực hiện trả về một state mới được lưu trữ trên store
+- store : nới lưu trữ các state -> render lại trả về View
+---------------------------------------------------------
+
+** tham khảo: npm redux
